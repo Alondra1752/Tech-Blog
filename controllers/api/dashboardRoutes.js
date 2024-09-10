@@ -1,7 +1,7 @@
 // Import the necessary modules for routing and models
 const expressRouter = require('express').Router(); // Instantiate a new router object from Express
-const { User, Post, Comment } = require('../models'); // Import the models for User, Post, and Comment
-const authenticate = require('../utils/authGuard'); // Import the middleware for authentication
+const { User, Post, Comment } = require('../../models'); // Import the models for User, Post, and Comment
+const authenticate = require('../../utils/authGuard'); // Import the middleware for authentication
 
 // Handle GET requests to the dashboard route
 expressRouter.get('/', authenticate, async (req, res) => {
