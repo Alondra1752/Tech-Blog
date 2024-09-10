@@ -1,0 +1,16 @@
+{{#each posts as |entry|}}
+<article class="post-card" id="post-{{entry.id}}">
+  <a href="/post/{{entry.id}}">
+    <h3 class="post-title">{{entry.title}}</h3>
+    <div class="post-content">
+      <p>{{entry.content}}</p>
+      <footer class="post-footer">
+        <span>by {{entry.User.username}}</span>
+        <span>on {{formatDate entry.updatedAt}}</span>
+      </footer>
+    </div>
+  </a>
+</article>
+{{/each}}
+
+
