@@ -1,6 +1,6 @@
 // Import the necessary classes and functions from Sequelize
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connection.js');
 
 
 class Post extends Model {}
