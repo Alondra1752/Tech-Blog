@@ -8,7 +8,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const { clog } = require('./utils/clog');
+const { clog } = require('./utils/clog.js');
 
 // Initializes express app
 const app = express();
