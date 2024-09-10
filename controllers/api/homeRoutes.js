@@ -1,7 +1,7 @@
 // Import required modules
 const expressRouter = require('express').Router(); // Create a new router instance
 const { Post, User, Comment } = require('../models'); // Load models for Post, User, and Comment
-const authenticate = require('../utils/authGuard'); // Load authentication middleware
+const authenticate = require('../utils/authGuard.js'); // Load authentication middleware
 
 // Handle GET requests for the homepage, which shows all posts
 expressRouter.get('/', async (req, res) => {
@@ -70,9 +70,9 @@ expressRouter.get('/login', (req, res) => {
 });
 
 // Handle GET requests to logout and redirect to homepage
-expressRouter.get("/js/logout.js", (req, res) => {
+expressRouter.get('/js/logout.js', (req, res) => {
     req.session.destroy(); // End the user session
-    res.redirect("/"); // Redirect to the homepage after logging out
+    res.redirect('/'); // Redirect to the homepage after logging out
 });
 
 // Export the router for use in other parts of the application

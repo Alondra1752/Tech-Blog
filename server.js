@@ -1,7 +1,7 @@
 // Importing necessary modules and configurations
-const routes = require('./controllers');
+const routes = require('./controllers/api/index.js');
 const sequelize = require('./config/connection');
-const helpers = require('./utils/helpers');
+const helpers = require('./utils/helpers.js');
 
 const path = require('path');
 const express = require('express');
