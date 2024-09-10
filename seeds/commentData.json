@@ -1,4 +1,20 @@
 
+const { Comment } = require('../models');
+
+// Define an array of comment entries to be inserted into the database
+const comments = [
+  { text: 'Great article!', author_id: 1, blog_post_id: 2, createdOn: new Date(), updatedOn: new Date() },
+  { text: 'Very helpful, thanks!', author_id: 2, blog_post_id: 3, createdOn: new Date(), updatedOn: new Date() },
+  { text: 'I have a different opinion on this.', author_id: 1, blog_post_id: 2, createdOn: new Date(), updatedOn: new Date() },
+  { text: 'A fantastic read.', author_id: 3, blog_post_id: 2, createdOn: new Date(), updatedOn: new Date() }
+];
+
+// Function to insert comment entries into the database using bulkCreate
+const populateComments = () => Comment.bulkCreate(comments);
+
+// Export the populateComments function for use in other modules
+module.exports = populateComments;
+
 
   
   

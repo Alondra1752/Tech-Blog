@@ -1,44 +1,39 @@
-[
-    {
-      "username": "cady_heron",
-      "password": "password123"
-    },
-    {
-      "username": "aaron_samuels",
-      "password": "password123"
-    },
-    {
-      "username": "regina_george",
-      "password": "password123"
-    },
-    {
-      "username": "gretchen_wieners",
-      "password": "password123"
-    },
-    {
-      "username": "janis_ian",
-      "password": "password123"
-    },
-    {
-      "username": "karen_smith",
-      "password": "password123"
-    },
-    {
-      "username": "damian",
-      "password": "password123"
-    },
-    {
-      "username": "coach_carr",
-      "password": "password123"
-    },
-    {
-      "username": "crying_girl",
-      "password": "password123"
-    },
-    {
-      "username": "testaccount",
-      "password": "password123"
-    }
-  ]
-  
+
+const { User } = require('../models');
+
+// Define an array with new user profiles for database seeding
+const userProfiles = [
+  {
+    name: 'Alex',
+    emailAddress: 'alex@techmail.com',
+    passphrase: 'alex123',
+  },
+  {
+    name: 'Jordan',
+    emailAddress: 'jordan@devmail.com',
+    passphrase: 'jordanrocks',
+  },
+  {
+    name: 'Taylor',
+    emailAddress: 'taylor@webdev.com',
+    passphrase: 'taylor2024',
+  },
+];
+
+// Function to insert user profiles into the database using bulkCreate
+const populateUsers = async () => {
+  try {
+    // Ensure that the data is being properly inserted into the database
+    await User.bulkCreate(userProfiles);
+    console.log('User profiles seeded successfully.');
+  } catch (error) {
+    console.error('Error seeding user profiles:', error);
+  }
+};
+
+// Export the populateUsers function for use in other modules (e.g., seeding scripts)
+module.exports = populateUsers;
+
+
+
   
