@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <!-- Link to custom CSS stylesheets -->
+  <link rel="stylesheet" type="text/css" href="/public/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+</head>
+
+<body>
+  <nav>
+    <!-- home and dashboard links -->
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    
+    <!-- logout and login button -->
+    {{#if loggedIn}}
+      <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+      <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+
+  <header>
+    <!-- Header for tech blog -->
+    <h1>Welcome to the Tech Blog Hub</h1>
+  </header>
+
+  <main>
+    <div class="gallery">
+      {{{body}}}
+    </div>
+  </main>
+
+  {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
+
