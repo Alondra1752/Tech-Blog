@@ -48,7 +48,7 @@ Submit Pull Requests: If you have improvements or new features, submit a pull re
 
 Repository Link: https://github.com/Alondra1752/Tech-Blog
 
-Deployment Link: 
+Deployment Link: https://alondra1752.github.io/Tech-Blog/
 
 ## Resources 
 
@@ -61,7 +61,7 @@ This project is licensed under MIT License. For more information please click on
 
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
- 
+
 
 
 
